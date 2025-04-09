@@ -1,0 +1,443 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+}
+
+*::selection{
+    color: #95c11e;
+    background-color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Custom styles go below */
+
+.cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #95c11e;
+    z-index: 999;
+}
+
+.cursor-blur{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #95c11e2b;
+    z-index: 9;
+    filter: blur(30px);
+}
+
+.nav {
+    height: 145px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 150px;
+    gap: 50px;
+    position: fixed;
+    z-index: 99;
+}
+
+.nav h4 {
+    font-size: 17px;
+    font-optical-sizing: auto;
+    font-weight: 490;
+    font-style: normal;
+}
+
+.nav img {
+    height: 70px;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+.main{
+    background-color: rgba(0, 0, 0, 0.37);
+    position: relative;
+}
+
+.page1{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 10;
+}
+
+.page1 h1{
+    text-transform: uppercase;
+    font-size: 140px;
+    position: relative;
+    font-weight: 700;
+}
+
+.page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    color: #000;
+    -webkit-text-stroke: 5px #95c11e;
+    z-index: -1;
+}
+
+.page1 h2{
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.page1 p{
+    width: 40%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.page2{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+.scroller{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.scroller::-webkit-scrollbar{
+    display: none;
+}
+
+.scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 30s linear infinite;
+}
+
+.scroller h4{
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    font-family: 'Gilroy-Regular';
+    -webkit-text-stroke: 2px #95c11e;
+    color: transparent;
+    margin-left: 10px;
+    transition: all linear 0.5s;
+}
+
+.scroller h4:hover{
+    color: #95c11e;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.about-us{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+    position: relative;
+}
+
+.about-us img{
+    height: 220px;
+    width: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about-in{
+    width: 50%;
+    text-align: center;
+}
+
+.about-in h3{
+    font-size: 54px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.about-in p{
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.card-container{
+    height: 60vh;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+}
+
+.cards{
+    height: 70%;
+    width: 21%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    transform: rotate(-10deg);
+    scale: 1;
+}
+
+#card1{
+    background-image: url(https://sidcup-golf-family.netlify.app/Assests/card1.avif);
+}
+
+#card2{
+    background-image: url(https://sidcup-golf-family.netlify.app/Assests/card2.webp);
+}
+
+#card3{
+    background-image: url(https://sidcup-golf-family.netlify.app/Assests/card3.avif);
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    padding: 30px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+
+.overlay h4{
+    font-size: 25px;
+    /* text-align: center; */
+    margin-bottom: 20px;
+    white-space: nowrap;
+    color: #000;
+}
+
+.overlay p{
+    color: #000;
+    font-size: 18px;
+}
+
+.cards:hover .overlay{
+    opacity: 1;
+}
+
+.cards:hover{
+    transform: rotate3d(0,0,1,1deg);
+    scale: 0.9;
+}
+
+.green-div{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom, #119F3A, #ACE022);
+}
+
+.green-div h4{
+    font-size: 27px;
+    width: 45%;
+    text-align: center;
+    color: #000;
+    line-height: 50px;
+}
+
+.green-div img{
+    height: 100%;
+    width: 14%;
+    object-fit: cover;
+}
+
+.page3{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.page3>p{
+    width: 62%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+.page3 img{
+    height: 60px;
+    position: absolute;
+}
+
+#colan1{
+    top: 20%;
+    left: 13%;
+}
+
+#colan2{
+    bottom: 27%;
+    right: 12%;
+}
+
+.page4{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 70px;
+}
+
+.elem{
+    height: 70%;
+    width: 26%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.elem h2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #95c11e;
+    z-index: 10;
+    font-size: 40px;
+    color: #000;
+    position: absolute;
+    transition: all ease 0.5s;
+}
+
+.elem img{
+    scale: 1.1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+}
+
+.elem:hover h2{
+    color: #fff;
+    background-color: transparent;
+}
+
+.elem:hover img{
+    scale: 1;
+}
+
+.page4 h1{
+    font-size: 6.3vw;
+    position: absolute;
+    top: -15%;
+    -webkit-text-stroke: 2px #fff;
+    color: #000;
+    font-family: 'Gilroy-Regular';
+}
+
+.footer{
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #119F3A 0%, #ACE022 80%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6.5vw;
+    padding: 0 100px;
+    position: relative;
+}
+
+.footer>img{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+.f1 img{
+    height: 100px;
+}
+
+.f1, .f2, .f3, .f4{
+    width: fit-content;
+    position: relative;
+    z-index: 99;
+}
+
+.f2 h3{
+    font-size: 1.6vw;
+    white-space: nowrap;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.f3 h3{
+    font-size: 1.6vw;
+    white-space: nowrap;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.f4 h4{
+    font-size: 1vw;
+    white-space: nowrap;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+    /* width: 8px;
+    background: linear-gradient(to right, #95c11e, black); */
+}
+
+/* body::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    border-radius: 50px;
+} */
